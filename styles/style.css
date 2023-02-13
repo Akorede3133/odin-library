@@ -1,0 +1,291 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    overflow-x: hidden;
+    position: relative;
+}
+header {
+    background-color: #fff;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.22);
+    height: ;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    background-color: rgba(76, 0, 130, 0.473);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.hide-overlay {
+    display: none;
+}
+header .nav {
+    position: absolute;
+    height: 100vh;
+    color: ;
+    background-color: #fff;
+    width: 70%;
+    right: 0;
+    top: 0;
+    z-index: 12;
+    gap: 20px;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.22);
+    transition: all 0.5s ease-in;
+}
+header .fa-bars {
+    cursor: pointer;
+    font-size: 25px;
+}
+header .hide-nav {
+    transform: translateX(100%);
+}
+.nav ul {
+    display: grid;
+    gap: 20px;
+    list-style: none;
+    padding: 20px;
+    margin-top: 50px;
+}
+.nav li {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+nav li:hover {
+    color: indigo;
+    font-weight: 900;
+}
+.nav li .fa-plus {
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.nav .fa-close, .book .fa-close {
+    position: absolute;
+    right: 5%;
+    top: 1%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-rows:;
+    gap: 20px;
+    width: 95%;
+    margin:20px auto;
+    position: relative;
+
+}
+main .book {
+    background-color: white;
+    height: 220px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    position: relative;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .22), rgba(128, 250, 57, 0.911), rgba(57, 118, 250, 0.555), rgba(255, 255, 255, .22));
+}
+.book .title {
+    font-size: 2rem;
+    padding: 10px 0;
+    font-weight: 900;
+    color: ;
+    text-transform: capitalize;
+}
+.book .fa-close {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.book .info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info li span {
+    color: black;
+    font-weight: normal;
+}
+.info li {
+    color:teal;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.book ul li {
+    font-size: 1.3rem;
+}
+.book .read-container {
+    margin-top: 30px;
+}
+.read-container fieldset {
+    display: flex;
+    align-items: center;
+    justify-content:;
+    gap: 15px;
+    border: none;
+}
+.read-container fieldset legend {
+    padding: 5px 0;
+}
+.read-container fieldset label {
+    font-weight: 700;
+}
+.read-container input {
+    appearance: none;
+    border: 1px solid indigo;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.read-container input:checked {
+    background-color: indigo;
+}
+form {
+    position: absolute;
+    background-color: indigo;
+    padding: 0 10px;
+    border-radius: 5px;
+    left: 50%;
+    top: 20vh;
+    transform: translateX(-50%);
+    width: 70%;
+    transition: all 0.5s linear;
+    z-index: 50;
+}
+form fieldset {
+    color: white;
+    padding: 20px;
+    border: none;
+    background-color: inherit;
+}
+form fieldset p {
+    padding: 15px 0;
+}
+form fieldset p label {
+    padding: 5px 0;
+    display: inline-block;
+}
+form fieldset input[type='text'], form fieldset input[type='number'],form button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+form i {
+    font-size: 20px;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+}
+form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+form .checkbox input {
+    appearance: none;
+    height: 18px;
+    width: 20px;
+    border: 1px solid gray;
+    background-color: ;
+    border-radius: ;
+    position: relative;
+    color: green;
+    cursor: pointer;
+}
+form .checkbox input::before {
+    content: "✅";
+    position: absolute;
+    font-size: 1.2em;
+    right: -2px;
+    top: -4px;
+    visibility: hidden;
+}
+form .checkbox input:checked::before {
+    visibility: visible;
+}
+form button {
+    background-color: #24243e;
+    color: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+}
+form button:hover {
+    opacity: 0.7;
+}
+form.hide-form {
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+@media (min-width: 768px) {
+    header .nav {
+        position: unset;
+        height: unset;
+        color: black;
+        background-color: unset;
+        width: unset;
+        gap: unset;
+        box-shadow: unset;
+    }
+    .nav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: unset;
+        margin-top: unset;
+    }
+    .nav li .fa-plus {
+        padding: 4px;
+        font-size: 12px;
+        margin-top: unset;
+    }
+    .nav .fa-close {
+        display: none;
+    }
+    .nav li {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+    header .fa-bars {
+        display: none;
+    }
+    header .hide-nav {
+        transform: unset;
+    }
+    main {
+        width: 95%;
+    }
+    form {
+        width: 400px;
+    }
+}
