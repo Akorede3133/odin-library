@@ -11,7 +11,9 @@ const overLay = document.querySelector('.overlay');
 const main = document.querySelector('main');
 const formCloseBtn = document.querySelector('form .fa-close');
 const checkbox = document.querySelector('form .checkbox input');
+const clearLibraryBtn = document.querySelector('header .clear');
 let myLibrary = [];
+console.log(clearLibraryBtn);
 
 /****---FUNCTIONS---****/
 function Book(title, author, pages, id) {
@@ -102,6 +104,10 @@ addBtn.addEventListener('click', ()=> {
     overLay.classList.remove('hide-overlay');
 })
 formCloseBtn.addEventListener('click', closeForm);
+clearLibraryBtn.addEventListener('click', ()=> {
+    myLibrary = [];
+    updateDOM(myLibrary);
+})
 
 
 
