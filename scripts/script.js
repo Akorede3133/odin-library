@@ -13,7 +13,6 @@ const formCloseBtn = document.querySelector('form .fa-close');
 const checkbox = document.querySelector('form .checkbox input');
 const clearLibraryBtn = document.querySelector('header .clear');
 let myLibrary = [];
-console.log(clearLibraryBtn);
 
 /****---FUNCTIONS---****/
 function Book(title, author, pages, id) {
@@ -108,20 +107,3 @@ clearLibraryBtn.addEventListener('click', ()=> {
     myLibrary = [];
     updateDOM(myLibrary);
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
